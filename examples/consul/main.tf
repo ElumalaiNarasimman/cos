@@ -24,7 +24,7 @@ module "consul" {
   ## required parameters
   vpc_id     = "${data.aws_vpc.default.id}"
   subnet_ids = "${data.aws_subnet_ids.all.ids}"
-  ami_id     = "ami-a23feadf"
+  ami_id     = "${var.consul_ami_id}"
 
   ## optional parameters
   aws_region              = "${local.aws_region}"
